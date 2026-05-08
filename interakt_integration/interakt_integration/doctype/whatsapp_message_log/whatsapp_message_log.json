@@ -1,0 +1,233 @@
+{
+ "actions": [],
+ "allow_copy": 0,
+ "allow_events_in_timeline": 1,
+ "allow_guest_to_view": 0,
+ "allow_import": 1,
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-05-08 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Transaction",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status",
+  "template_name",
+  "provider_message_id",
+  "communication",
+  "reference_section",
+  "reference_doctype",
+  "reference_name",
+  "recipient_section",
+  "country_code",
+  "phone_number",
+  "callback_data",
+  "timeline_section",
+  "queued_on",
+  "sent_on",
+  "delivered_on",
+  "read_on",
+  "sdk_section",
+  "user_sync_response",
+  "event_track_response",
+  "payload_section",
+  "request_payload",
+  "response_payload",
+  "webhook_payload",
+  "error_message"
+ ],
+ "fields": [
+  {
+   "default": "WAIL-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "WAIL-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "default": "Queued",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Queued\nSent\nDelivered\nRead\nFailed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name"
+  },
+  {
+   "fieldname": "provider_message_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Provider Message ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "communication",
+   "fieldtype": "Link",
+   "label": "Communication",
+   "options": "Communication",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_section",
+   "fieldtype": "Section Break",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reference DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "label": "Reference Name",
+   "options": "reference_doctype"
+  },
+  {
+   "fieldname": "recipient_section",
+   "fieldtype": "Section Break",
+   "label": "Recipient"
+  },
+  {
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "callback_data",
+   "fieldtype": "Data",
+   "label": "Callback Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "timeline_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "fieldname": "queued_on",
+   "fieldtype": "Datetime",
+   "label": "Queued On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sent_on",
+   "fieldtype": "Datetime",
+   "label": "Sent On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivered_on",
+   "fieldtype": "Datetime",
+   "label": "Delivered On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "read_on",
+   "fieldtype": "Datetime",
+   "label": "Read On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sdk_section",
+   "fieldtype": "Section Break",
+   "label": "SDK Tracking"
+  },
+  {
+   "fieldname": "user_sync_response",
+   "fieldtype": "Code",
+   "label": "User Sync Response",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "event_track_response",
+   "fieldtype": "Code",
+   "label": "Event Track Response",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payload_section",
+   "fieldtype": "Section Break",
+   "label": "Payloads"
+  },
+  {
+   "fieldname": "request_payload",
+   "fieldtype": "Code",
+   "label": "Request Payload",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_payload",
+   "fieldtype": "Code",
+   "label": "Response Payload",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "webhook_payload",
+   "fieldtype": "Code",
+   "label": "Webhook Payload",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  }
+ ],
+ "idx": 0,
+ "is_submittable": 0,
+ "istable": 0,
+ "links": [],
+ "modified": "2026-05-08 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Interakt Integration",
+ "name": "WhatsApp Message Log",
+ "naming_rule": "By Naming Series",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
